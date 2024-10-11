@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bebas Neue", sans-serif;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+.nav h3{
+    font-family: "Poppins", sans-serif;
+}
+.nav:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.menu {
+    display: flex;
+    gap: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+    font-family: "Poppins", sans-serif;
+}
+.menu a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+.menu a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.menu a:hover {
+    color: #06d38f;
+}
+.up{
+    background-image: url("images/blog\ bg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.up p{
+    font-size: 90px;
+    font-weight: 500;
+    line-height: 110px;
+}
+.art{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+}
+.art h1{
+    font-size: 52px;
+    font-weight: 500;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+.card{
+    background-color: white;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    /* background-color: aqua; */
+    height: 500px;
+    width: 450px;
+    padding: 8px;
+    
+}
+.card h2{
+    font-size: 26px;
+    font-weight: 300;
+}
+.card p{
+    font-size: 26px;
+    font-weight: 500;
+}
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.card button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.card button:hover{
+    background-color: #06d38f;
+    color: white;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.guide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+}
+.guide h1{
+    font-size: 52px;
+    font-weight: 500;
+}
+.guide-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: row;
+}
+.guide-book{
+    height: 500px;
+    width: 600px;
+    /* background-color: aqua; */
+}
+.guide-book img{
+    height: 500px;
+    width: 600px;
+    object-fit: cover;
+}
+.guide-det{
+    height: 500px;
+    width: 600px;
+    /* background-color: aqua; */
+    font-size: 30px;
+}
+.guide-det h2{
+    font-weight: 400;
+}
+.guide-det button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.guide-det button:hover{
+    background-color: #06d38f;
+    color: white;
+}
+.articles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+}
+.articles h1{
+    font-size: 52px;
+    font-weight: 500;
+}
+.articles-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    flex-direction: row;
+}
+.article{
+    height: 480px;
+    width: 450px;
+    /* background-color: aqua; */
+}
+.articles h2{
+    font-size: 26px;
+    font-weight: 300;
+}
+.articles p{
+    font-size: 26px;
+    font-weight: 500;
+}
+.article img{
+    height: 300px;
+    width: 450px;
+}
+.article button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+.article button:hover{
+    background-color: #06d38f;
+    color: white;
+}
+.article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.travel-vid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-direction: column;
+    width: 100%;
+    height: 700px;
+}
+.travel-vid h2{
+    font-size: 52px;
+    font-weight: 500;
+}
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.video iframe {
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 1200px) {
+    .nav {
+        padding: 20px 50px;
+    }
+    .guide-box {
+        padding: 20px 30px;
+    }
+    .guide-book, .guide-det {
+        width: 500px;
+    }
+    .guide-book img {
+        width: 100%;
+        height: 100%;
+    }
+    .cards, .articles-box {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .card, .article {
+        width: 400px;
+        height: auto;
+        min-height: 480px;
+    }
+    .guide-book, .guide-det {
+        width: 450px;
+        height: auto;
+    }
+    .article img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 900px) {
+    .up p {
+        font-size: 70px;
+        line-height: 85px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .guide-box {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .guide-book, .guide-det {
+        width: 90%;
+        max-width: 600px;
+    }
+    .video {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu {
+        justify-content: center;
+    }
+    .up p {
+        font-size: 60px;
+        line-height: 75px;
+    }
+    .art h1, .guide h1, .articles h1, .travel-vid h2 {
+        font-size: 42px;
+    }
+    .cards, .articles-box {
+        width: 100%;
+        justify-content: center;
+    }
+    .card, .article {
+        width: 90%;
+        max-width: 450px;
+    }
+    .guide-det {
+        font-size: 24px;
+        height: auto;
+        padding: 20px;
+    }
+    .travel-vid {
+        height: auto;
+        min-height: 500px;
+        padding: 40px 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .nav {
+        padding: 15px 10px;
+    }
+    .menu {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .menu a {
+        margin: 3px 8px;
+    }
+    .up p {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .art h1, .guide h1, .articles h1, .travel-vid h2 {
+        font-size: 36px;
+    }
+    .art, .guide, .articles {
+        padding: 20px 10px;
+    }
+    .cards, .articles-box {
+        padding: 10px;
+        gap: 15px;
+    }
+    .card, .article {
+        width: 95%;
+        padding: 10px;
+        min-height: auto;
+    }
+    .card img, .article img {
+        height: 250px;
+    }
+    .card h2, .card p, .articles h2, .articles p {
+        font-size: 22px;
+        margin: 10px 0;
+    }
+    .guide-det {
+        font-size: 20px;
+        width: 100%;
+    }
+    .guide-book {
+        width: 100%;
+        height: auto;
+    }
+    .guide-book img {
+        height: auto;
+    }
+    .video {
+        width: 100%;
+    }
+    .video iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .up p {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .art h1, .guide h1, .articles h1, .travel-vid h2 {
+        font-size: 32px;
+    }
+    .card h2, .card p, .articles h2, .articles p {
+        font-size: 20px;
+    }
+    .guide-det {
+        font-size: 18px;
+    }
+    .card img, .article img {
+        height: 200px;
+    }
+    .video iframe {
+        height: 250px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .menu a {
+        margin: 2px 5px;
+        font-size: 14px;
+    }
+    .up p {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .card button, .article button, .guide-det button {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+    .video iframe {
+        height: 200px;
+    }
+}
+@media screen and (max-height: 800px) {
+    .up {
+        height: 100vh;
+    }
+}
+@media screen and (max-height: 600px) {
+    .up p {
+        font-size: clamp(28px, 6vw, 60px);
+        line-height: 1.2;
+    }
+}
