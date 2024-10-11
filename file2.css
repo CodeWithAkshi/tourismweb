@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+    color: #333;
+}
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right,rgba(255, 255, 255, 0) 0%,rgba(255, 255, 255, 0.2) 50%,rgba(255, 255, 255, 0) 100%);
+    animation: shimmer 3s infinite linear;
+}
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: sleft 1s ease-out;
+    position: relative;
+}
+header p {
+    animation: sright 1s ease-out;
+    position: relative;
+}
+.main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.tour {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fade 1s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.tour:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.mimage {
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    animation: fade 1.2s ease-out;
+}
+.mimage img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+.mimage:hover img {
+    transform: scale(1.05);
+}
+.pcard {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fade 1.4s ease-out;
+    transition: transform 0.3s ease;
+}
+.pcard:hover {
+    transform: translateY(-5px);
+}
+.oprice {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 18px;
+}
+.dprice {
+    font-size: 32px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+.dprice:hover {
+    color: #c0392b;
+}
+.btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    width: 100%;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.02);
+}
+.tourd {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fade 1.6s ease-out;
+    transition: transform 0.3s ease;
+}
+.tourd:hover {
+    transform: translateY(-5px);
+}
+.ditem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.ditem:hover {
+    transform: translateX(10px);
+}
+.pack {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fade 1.8s ease-out;
+}
+.fea {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.featp {
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.featp:hover {
+    transform: translateY(-10px);
+}
+.featp img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+}
+.featp:hover img {
+    transform: scale(1.1);
+}
+img {
+    opacity: 0;
+    animation: fade 0.5s ease-out forwards;
+}
+html {
+    scroll-behavior: smooth;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sleft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes sright {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .dprice {
+        font-size: 24px;
+    }
+
+    .btn {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+    .featp:hover {
+        transform: translateY(-5px);
+    }
+}
